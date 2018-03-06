@@ -1,0 +1,175 @@
+html,
+body {
+    height: 100%;
+}
+
+button:focus {
+    outline: none;
+}
+
+.form-control::-webkit-input-placeholder { /* Chrome */
+  color: white;
+}
+.form-control:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+}
+.form-control::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  opacity: 1;
+}
+.form-control:-moz-placeholder { /* Firefox 4 - 18 */
+  color: white;
+  opacity: 1;
+}
+
+
+input[type="text"] {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px dotted #e3dfe0;
+    color: #e3dfe0;
+    border-radius: 0;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: none !important;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    color: white;
+}
+
+hr {
+    background-color: #e3dfe0;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+a {
+    color: #e3dfe0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(250, 250, 250, 0.4);
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    color: #e3dfe0;
+}
+
+.navbar-expand-md p {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+}
+
+.nav-item a {
+    font-size: 18px;
+}
+
+.landingPage p:nth-child(1) {
+    font-size: 100px;
+    line-height: 110px;
+}
+
+.landingPage p:nth-child(2) {
+    font-size: 22px;
+}
+
+.landingPage button {
+    border: 1px solid #e3dfe0;
+    background-color: #e3dfe0;
+    color: #3b4559;
+    margin-top: 50px;
+    font-size: 22px;
+}
+
+.landingPage button:hover {
+    border: 1px solid #e3dfe0;
+    background-color: #3b4559;
+    color: #e3dfe0;
+    cursor: pointer;
+}
+
+.landingImg {
+    background-image: url("./assets/main.jpg");
+    background-size: 100vh auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+}
+
+.section-header-p {
+    font-size: 38px;
+    color: white;
+}
+
+.copy-p {
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
+}
+
+.copy-header-p {
+    font-size: 24px;
+}
+
+.list-header-p {
+    font-size: 18px;
+}
+
+.accom {
+    width: 35%;
+}
+
+.things-to-do {
+    margin-bottom: -6px;
+}
+
+.things-circle {
+    background-color: #e3dfe0;
+    width: 65px;
+    height: 65px;
+}
+
+.things-circle i {
+    color: #3b4559;
+    font-size: 30px;
+}
+
+.mini-button {
+    border: 1px solid #e3dfe0;
+    background-color: #e3dfe0;
+    color: #3b4559;
+}
+
+.mini-button:hover {
+    border: 1px solid #e3dfe0;
+    background-color: #3b4559;
+    color: #e3dfe0;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .landingImg {
+        display: none;
+    }
+    .landingPage p:nth-child(1) {
+        font-size: 80px;
+        line-height: 80px;
+    }
+
+    .landingPage p:nth-child(2) {
+        font-size: 20px;
+    }
+    .accom {
+        width: 75%;
+    }
+}
