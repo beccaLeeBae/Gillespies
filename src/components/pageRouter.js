@@ -6,6 +6,38 @@ import Details from "./details";
 import RSVP from "./rsvp";
 import Registry from "./registry";
 import GuestList from "./guestList";
+// import E1 from '../assets/engP-1.jpg';
+import E2 from '../assets/engP-100.jpg';
+// import E3 from '../assets/engP-104.jpg';
+import E4 from '../assets/engP-116.jpg';
+// import E5 from '../assets/engP-121.jpg';
+// import E6 from '../assets/engP-127.jpg';
+import E7 from '../assets/engP-13.jpg';
+// import E8 from '../assets/engP-143.jpg';
+// import E9 from '../assets/engP-152.jpg';
+import E10 from '../assets/engP-168.jpg';
+import E11 from '../assets/engP-178.jpg';
+import E12 from '../assets/engP-180.jpg';
+// import E13 from '../assets/engP-185-Edit.jpg';
+import E14 from '../assets/engP-188.jpg';
+// import E15 from '../assets/engP-193.jpg';
+import E16 from '../assets/engP-195.jpg';
+import E17 from '../assets/engP-196.jpg';
+import E18 from '../assets/engP-20.jpg';
+// import E19 from '../assets/engP-201.jpg';
+import E20 from '../assets/engP-202.jpg';
+// import E21 from '../assets/engP-28.jpg';
+// import E22 from '../assets/engP-31.jpg';
+import E23 from '../assets/engP-40.jpg';
+// import E24 from '../assets/engP-42.jpg';
+import E25 from '../assets/engP-45.jpg';
+import E26 from '../assets/engP-48.jpg';
+import E27 from '../assets/engP-6.jpg';
+import E28 from '../assets/engP-62.jpg';
+import E29 from '../assets/engP-8.jpg';
+import E30 from '../assets/engP-92.jpg';
+import E31 from '../assets/engP-99.jpg';
+
 import moment from "moment";
 import axios from "axios";
 import "../App.css";
@@ -17,7 +49,7 @@ class Router extends Component {
 			url: "http://localhost:3000",
 			today: moment(),
 			daysUntil: null,
-			rsvpReady: true,
+			rsvpReady: false,
 			rsvpAllowGuestField: false,
 			inputs: {
 				first_name: null,
@@ -26,7 +58,40 @@ class Router extends Component {
 				guest_name: "NONE"
 			},
 			guestEmail: null,
-			guestList: []
+			guestList: [],
+			carouselPhotos: [
+			// { src: E1 },
+			{ src: E2 },
+			// { src: E3 },
+			{ src: E4 },
+			// { src: E5 },
+			// { src: E6 },
+			{ src: E7 },
+			// { src: E8 },
+			// { src: E9 },
+			{ src: E10 },
+			{ src: E11 },
+			{ src: E12 },
+			// { src: E13 },
+			{ src: E14 },
+			// { src: E15 },
+			{ src: E16 },
+			{ src: E17 },
+			{ src: E18 },
+			// { src: E19 },
+			{ src: E20 },
+			// { src: E21 },
+			// { src: E22 },
+			{ src: E23 },
+			// { src: E24 },
+			{ src: E25 },
+			{ src: E26 },
+			{ src: E27 },
+			{ src: E28 },
+			{ src: E29 },
+			{ src: E30 },
+			{ src: E31 }
+			]
 		};
 		this.changeInput = this.changeInput.bind(this);
 		this.changeEmailInput = this.changeEmailInput.bind(this);
@@ -104,7 +169,7 @@ class Router extends Component {
 				<Route exact path="/" render={props => <Landing {...props} />} />
 				<Route
 					path="/home"
-					render={props => <Home {...props} daysUntil={this.state.daysUntil} />}
+					render={props => <Home {...props} daysUntil={this.state.daysUntil} carouselPhotos={this.state.carouselPhotos} />}
 				/>
 				<Route path="/details" render={props => <Details {...props} />} />
 				<Route

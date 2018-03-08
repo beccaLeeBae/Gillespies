@@ -1,10 +1,22 @@
 import React, { Component } from "react";
+import Main from '../assets/engP-45.jpg';
 import NavBar from "./nav";
-import Photo1 from "../assets/engPhoto1.png";
-import PrevPhoto1 from "../assets/prevPhoto1.png";
 import "../App.css";
 
 class Home extends Component {
+	carouselMapPhotos(){
+		return this.props.carouselPhotos.map(photo => {
+			return (
+							<div className="carousel-item" key={Math.random()}>
+								<img
+									className="d-block"
+									src={photo.src}
+									alt="Grace & Damon"
+								/>
+							</div>
+				)
+		})
+	}
 	render() {
 		return (
 			<div className="container-fluid">
@@ -13,9 +25,13 @@ class Home extends Component {
 					<p className="section-header-p mt-5">
 						Introducing Mr. & Mrs. Gillespie
 					</p>
-					{this.props.daysUntil > 0 && (<p className="copy-p mb-5">in {this.props.daysUntil} days</p>)}
-					{this.props.daysUntil === 0 && (<p className="copy-p mb-5">today!</p>)}
-					{this.props.daysUntil < 0 && (<p className="copy-p mb-5">est. Oct. 20, 2018</p>)}
+					{this.props.daysUntil > 0 && (
+						<p className="copy-p mb-5">in {this.props.daysUntil} days</p>
+					)}
+					{this.props.daysUntil === 0 && <p className="copy-p mb-5">today!</p>}
+					{this.props.daysUntil < 0 && (
+						<p className="copy-p mb-5">est. Oct. 20, 2018</p>
+					)}
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<div
@@ -23,29 +39,15 @@ class Home extends Component {
 						className="carousel slide"
 						data-ride="carousel"
 					>
-						<ol className="carousel-indicators">
-							<li
-								data-target="#carouselExampleIndicators"
-								data-slide-to="0"
-								className="active"
-							/>
-							<li data-target="#carouselExampleIndicators" data-slide-to="1" />
-							<li data-target="#carouselExampleIndicators" data-slide-to="2" />
-						</ol>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-								<img className="d-block w-100" src={Photo1} alt="Grace & Damon" />
-							</div>
-							<div className="carousel-item">
 								<img
 									className="d-block w-100"
-									src={PrevPhoto1}
+									src={Main}
 									alt="Grace & Damon"
 								/>
 							</div>
-							<div className="carousel-item">
-								<img className="d-block w-100" src={Photo1} alt="Grace & Damon" />
-							</div>
+							{this.carouselMapPhotos()}
 						</div>
 						<a
 							className="carousel-control-prev"

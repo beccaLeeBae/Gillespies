@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import VenueImg from "../assets/turnbull.jpg";
+import VenuePlaceHolder from '../assets/turnbullSmall.jpg';
 import Chat from "../assets/chat.jpg";
 import Dwell from "../assets/dwell.jpg";
+import ProgressiveImage from "react-progressive-image";
 import NavBar from "./nav";
 import "../App.css";
 
@@ -12,7 +14,17 @@ class Details extends Component {
 				<NavBar />
 				<div className="row d-flex flex-column justify-content-center align-items-center">
 					<p className="section-header-p m-5">The Ceremony</p>
-					<img src={VenueImg} className="w-75 mb-5" alt="The Turnbull" />
+
+					<ProgressiveImage src={VenueImg} placeholder={VenuePlaceHolder}>
+						{(src, loading) => (
+							<img
+								style={{ opacity: loading ? 0.5 : 1 }}
+								src={src}
+								alt=""
+								className="w-75 mb-5"
+							/>
+						)}
+					</ProgressiveImage>
 					<p className="copy-p mb-5">
 						Please join us for the ceremony on October 20th at 6:00 PM, followed
 						by a cocktail hour and reception.
