@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import VenueImg from "../assets/turnbull.jpg";
 import VenuePlaceHolder from '../assets/turnbullSmall.jpg';
-import Chat from "../assets/chat.jpg";
 import Dwell from "../assets/dwell.jpg";
 import ProgressiveImage from "react-progressive-image";
 import NavBar from "./nav";
@@ -25,8 +24,8 @@ class Details extends Component {
 							/>
 						)}
 					</ProgressiveImage>
-					<p className="copy-p mb-5">
-						Please join us for the ceremony on October 20th at 6:00 PM, followed
+					<p className="copy-p mb-5 pl-4 pr-4">
+						Please join us for the ceremony on October 20th, followed
 						by a cocktail hour and reception.
 					</p>
 					<p className="copy-header-p">The Turnbull Building</p>
@@ -47,13 +46,13 @@ class Details extends Component {
 				<hr />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-5">
 					<p className="section-header-p m-5">Accommodations</p>
-					<p className="copy-p">
-						For our out of town guests, the following hotels are recommended.
+					<p className="copy-p pl-4 pr-4">
+						For our out of town guests, a select number of rooms have been blocked off at The Dwell Hotel.
 						<br />
-						<small>
+						<small><i>
 							Please call and reference 'Kling/Gillespie Wedding' to receive a
 							discount on your booking.
-						</small>
+						</i></small>
 					</p>
 					<br />
 					<img src={Dwell} alt="The Dwell Hotel" className="accom m-2" />
@@ -67,24 +66,6 @@ class Details extends Component {
 					</p>
 					<a
 						href="http://www.thedwellhotel.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Book Online
-					</a>
-					<br />
-					<br />
-					<img src={Chat} alt="The Chattanoogan" className="accom m-2" />
-					<p className="copy-header-p">The Chattanoogan</p>
-					<p className="copy-p">
-						1201 Broad St.
-						<br />
-						Chattanooga, TN 37402
-						<br />
-						800 &middot; 619 &middot; 0018
-					</p>
-					<a
-						href="https://www.chattanooganhotel.com/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -209,8 +190,8 @@ class Details extends Component {
 						</p>
 					</div>
 				</div>
-				<footer className="nav navbar-fixed-bottom justify-content-center">
-					<p className="copy-p">
+				<footer className="nav navbar-fixed-bottom d-flex flex-column align-items center justify-content-center">
+					<p className="copy-p m-0">
 						Made with &hearts; by{" "}
 						<a
 							href="http://www.beccaleebae.com"
@@ -220,6 +201,7 @@ class Details extends Component {
 							Becca Lee Bae
 						</a>
 					</p>
+					<p className="copy-p">Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights Reserved.</p>
 				</footer>
 			</div>
 		);

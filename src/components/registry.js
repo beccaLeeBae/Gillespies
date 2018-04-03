@@ -24,8 +24,8 @@ class Registry extends Component {
 						/>
 					</a>
 				</div>
-				<footer className="navbar fixed-bottom justify-content-center">
-					<p className="copy-p">
+				<footer className="navbar fixed-bottom d-flex flex-column align-items-center justify-content-center">
+					<p className="copy-p m-0">
 						Made with &hearts; by{" "}
 						<a
 							href="http://www.beccaleebae.com"
@@ -35,6 +35,7 @@ class Registry extends Component {
 							Becca Lee Bae
 						</a>
 					</p>
+					<p className="copy-p">Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights Reserved.</p>
 				</footer>
 			</div>
 		);

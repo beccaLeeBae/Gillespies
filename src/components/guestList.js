@@ -9,11 +9,7 @@ class GuestList extends Component {
 		return this.props.list.map(guestInfo => {
 			var firstName = guestInfo.first_name;
 			var lastName = guestInfo.last_name;
-			var guestName = guestInfo.guest_name;
 			var status = "";
-			if (guestInfo.guest_name === null || guestInfo.guest_name === "" || guestInfo.guest_name === "NONE") {
-				guestName = "NO GUEST";
-			};
 			if (guestInfo.rsvp_status === true) {
 				status = "ATTENDING";
 			};
@@ -28,9 +24,6 @@ class GuestList extends Component {
 				<div className="col">
 				<p className="copy-p">{status}</p>
 				</div>
-				<div className="col">
-				<p className="copy-p">{guestName}</p>
-				</div>
 				<div className='col'>
 				<button className="mini-button" onClick={e => this.props.removeGuest(e, guestInfo.id)}>Delete</button>
 				</div>
@@ -41,7 +34,9 @@ class GuestList extends Component {
 	render(){
 	return(
 		<div className="container-fluid">
-		<p className="section-header-p mt-5 mb-2">Guest List</p>
+		{this.props.listLoaded ? (
+			<div>
+					<p className="section-header-p mt-5 mb-2">Guest List</p>
 		<button className="mini-button mb-5" onClick={this.props.sortByStatus}>Sort List</button>
 		<div className="row">
 		<div className="col">
@@ -51,13 +46,12 @@ class GuestList extends Component {
 		<p className="list-header-p">RSVP</p>
 		</div>
 		<div className="col">
-		<p className="list-header-p">+1?</p>
-		</div>
-		<div className="col">
 		<p className="list-header-p">Options</p>
 		</div>
 		</div>
 		{this.renderList()}
+			</div>
+			) : (<p className="section-header-p mt-5 mb-2">Guest List Loading...</p>)}
 		</div>
 		)
 }

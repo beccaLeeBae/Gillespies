@@ -17,10 +17,10 @@ class Nav extends Component {
         >
         <i className="mt-2 fas fa-bars"></i>
         </button>
-        <p className="mt-2 navbar-toggler"
-          aria-expanded="false">Grace & Damon</p>
+        <Link to="/" className="mt-2 navbar-toggler"
+          aria-expanded="false">Grace & Damon</Link>
         <div className="collapse navbar-collapse text-left" id="navbarSupportedContent">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav w-100 justify-content-center">
             <li className="nav-item">
               <Link to="/home" className="nav-link">
                 Home

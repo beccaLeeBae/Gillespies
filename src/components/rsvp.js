@@ -10,7 +10,8 @@ class RSVP extends Component {
 				{this.props.rsvpReady ? (
 					<div className="row d-flex flex-column justify-content-center align-items-center">
 						<p className="section-header-p mt-5">RSVP</p>
-						<p className="copy-p mb-5">Kindly reply on or before August 25.</p>
+						<p className="copy-p mb-5">Kindly reply on or before August 25.<br/>
+						<small>If you are RSVPing for multiple guests or a family, please add all first names of guests in the First Name field.</small></p>
 						<form onSubmit={e => this.props.sendRsvp(e)}>
 							<div className="row">
 								<div className="col">
@@ -76,14 +77,14 @@ class RSVP extends Component {
 					</div>
 				) : (
 					<div className="row h-75 d-flex flex-column justify-content-center align-items-center">
-						<p className="copy-header-p">Coming Soon</p>
+						<p className="copy-header-p">Coming in August.</p>
 						<div className="things-circle d-flex justify-content-center align-items-center rounded-circle">
 							<i className="far fa-envelope" />
 						</div>
 					</div>
 				)}
-				<footer className="navbar fixed-bottom justify-content-center">
-					<p className="copy-p">
+				<footer className="navbar fixed-bottom d-flex flex-column align-items-center justify-content-center">
+					<p className="copy-p m-0">
 						Made with &hearts; by{" "}
 						<a
 							href="http://www.beccaleebae.com"
@@ -93,6 +94,7 @@ class RSVP extends Component {
 							Becca Lee Bae
 						</a>
 					</p>
+					<p className="copy-p">Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights Reserved.</p>
 				</footer>
 			</div>
 		);

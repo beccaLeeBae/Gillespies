@@ -1,36 +1,23 @@
 import React, { Component } from "react";
-import Main from '../assets/engP-45.jpg';
+import Main from "../assets/engP-45.jpg";
 import NavBar from "./nav";
 import "../App.css";
 
 class Home extends Component {
-	carouselMapPhotos(){
-		return this.props.carouselPhotos.map(photo => {
-			return (
-							<div className="carousel-item" key={Math.random()}>
-								<img
-									className="d-block"
-									src={photo.src}
-									alt="Grace & Damon"
-								/>
-							</div>
-				)
-		})
-	}
 	render() {
 		return (
 			<div className="container-fluid">
 				<NavBar />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
-					<p className="section-header-p mt-5">
+					<p className="section-header-p m-0 mt-5 pt-5">
 						Introducing Mr. & Mrs. Gillespie
 					</p>
 					{this.props.daysUntil > 0 && (
-						<p className="copy-p mb-5">in {this.props.daysUntil} days</p>
+						<p className="copy-p pb-5 mb-5">in {this.props.daysUntil} days</p>
 					)}
 					{this.props.daysUntil === 0 && <p className="copy-p mb-5">today!</p>}
 					{this.props.daysUntil < 0 && (
-						<p className="copy-p mb-5">est. Oct. 20, 2018</p>
+						<p className="copy-p mb-5 pb-5">est. Oct. 20, 2018</p>
 					)}
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
@@ -41,13 +28,9 @@ class Home extends Component {
 					>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-								<img
-									className="d-block w-100"
-									src={Main}
-									alt="Grace & Damon"
-								/>
+								<img className="d-block w-100" src={Main} alt="Grace & Damon" />
 							</div>
-							{this.carouselMapPhotos()}
+							{this.props.renderCarousel()}
 						</div>
 						<a
 							className="carousel-control-prev"
@@ -70,42 +53,44 @@ class Home extends Component {
 					</div>
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
-					<p className="section-header-p mt-5">Meet The Couple</p>
+					<p className="section-header-p mt-5">The Proposal</p>
 				</div>
 				<div className="row d-flex justify-content-center align-items-center mb-1">
 					<div className="col-md-6 d-flex flex-column justify-content-center align-items-center p-5">
-						<p className="copy-header-p">Grace Kling</p>
+						<p className="copy-header-p">Her Side</p>
 						<p className="copy-p">
-							Dr. Tanaka joined the department as an Assistant Professor in
-							2017. Before moving to UT, he held a postdoctoral researcher
-							position at KTH Royal Institute of Technology, Sweden. From 2012
-							to 2015, he was a postdoctoral associate at Massachusetts
-							Institute of Technology (MIT), USA. Dr. Tanaka received his M.S.
-							and Ph.D. degrees in Aerospace Engineering from the University of
-							Illinois at Urbana-Champaign (UIUC), USA, in 2009 and 2012,
-							respectively. Prior to his graduate studies, he received his B.S.
-							degree in Aerospace Engineering from the University of Tokyo,
-							Japan.
+							The week leading up to the proposal, Damon had been acting very
+							weird; weirder than usual. The morning of the proposal, Damon
+							asked if I could be a background extra on his show and told me to
+							wear my lucky pants. My little brother was in town and my friend,
+							Cara, took off of work to be on the RISE set (for several
+							exhausting hours). I had a feeling of what was to come when he
+							jumped off the stage, came towards me, and said our favorite
+							Bachelor catchphrase: “Can I steal you for a second?”. He brought
+							me onto the stage, trembling and struggling for the right words
+							(but he seemed very excited too!). Even though I didn’t wear my
+							lucky pants, it was still a lucky day!
 						</p>
 					</div>
 					<div className="col-md-6 d-flex flex-column justify-content-center align-items-center p-5">
-						<p className="copy-header-p">Damon Gillespie</p>
+						<p className="copy-header-p">His Side</p>
 						<p className="copy-p">
-							Dr. Tanaka joined the department as an Assistant Professor in
-							2017. Before moving to UT, he held a postdoctoral researcher
-							position at KTH Royal Institute of Technology, Sweden. From 2012
-							to 2015, he was a postdoctoral associate at Massachusetts
-							Institute of Technology (MIT), USA. Dr. Tanaka received his M.S.
-							and Ph.D. degrees in Aerospace Engineering from the University of
-							Illinois at Urbana-Champaign (UIUC), USA, in 2009 and 2012,
-							respectively. Prior to his graduate studies, he received his B.S.
-							degree in Aerospace Engineering from the University of Tokyo,
-							Japan.
+							I was so excited for this day, I’d told basically everyone in my
+							life except Grace. The RISE shuttle car picked us up around 5:45pm
+							and we went straight to Brooklyn for hair and make up. Once we got
+							to set, I introduced Grace, her friend, Cara, and her brother,
+							Rowdy, to the RISE crew and did two very dramatic scenes (so I was
+							extremely raw with emotion). After filming, the assistant director
+							told us we were “turning the cameras around for a crowd reaction
+							shots”, which was the cue for me to get ready! My heart jumped as
+							I went upstairs to grab my mom, niece, and the ring. I ran back to
+							set as Rosemary (our assistant director) was filming me. The rest
+							was awesome chaos.
 						</p>
 					</div>
 				</div>
-				<footer className="nav navbar-fixed-bottom justify-content-center">
-					<p className="copy-p">
+				<footer className="nav navbar-fixed-bottom d-flex flex-column align-items-center justify-content-center">
+					<p className="copy-p m-0">
 						Made with &hearts; by{" "}
 						<a
 							href="http://www.beccaleebae.com"
@@ -114,6 +99,10 @@ class Home extends Component {
 						>
 							Becca Lee Bae
 						</a>
+					</p>
+					<p className="copy-p">
+						Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights
+						Reserved.
 					</p>
 				</footer>
 			</div>
