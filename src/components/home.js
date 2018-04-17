@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Main from "../assets/engP-45.jpg";
+import Main from "../assets/engP2-6.jpg";
 import NavBar from "./nav";
 import "../App.css";
 
@@ -22,7 +22,7 @@ class Home extends Component {
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<div
-						id="carouselExampleIndicators"
+						id="engagementPhotosCarousel"
 						className="carousel slide"
 						data-ride="carousel"
 					>
@@ -34,7 +34,7 @@ class Home extends Component {
 						</div>
 						<a
 							className="carousel-control-prev"
-							href="#carouselExampleIndicators"
+							href="#engagementPhotosCarousel"
 							role="button"
 							data-slide="prev"
 						>
@@ -43,7 +43,7 @@ class Home extends Component {
 						</a>
 						<a
 							className="carousel-control-next"
-							href="#carouselExampleIndicators"
+							href="#engagementPhotosCarousel"
 							role="button"
 							data-slide="next"
 						>

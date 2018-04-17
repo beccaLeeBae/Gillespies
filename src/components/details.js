@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import VenueImg from "../assets/turnbull.jpg";
-import VenuePlaceHolder from '../assets/turnbullSmall.jpg';
-import Dwell from "../assets/dwell.jpg";
+import VenuePlaceHolder from "../assets/turnbullSmall.jpg";
 import ProgressiveImage from "react-progressive-image";
 import NavBar from "./nav";
 import "../App.css";
@@ -25,8 +24,8 @@ class Details extends Component {
 						)}
 					</ProgressiveImage>
 					<p className="copy-p mb-5 pl-4 pr-4">
-						Please join us for the ceremony on October 20th, followed
-						by a cocktail hour and reception.
+						Please join us for the ceremony on October 20th, followed by a
+						cocktail hour and reception.
 					</p>
 					<p className="copy-header-p">The Turnbull Building</p>
 					<p className="copy-p">
@@ -45,32 +44,32 @@ class Details extends Component {
 				</div>
 				<hr />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-5">
-					<p className="section-header-p m-5">Accommodations</p>
-					<p className="copy-p pl-4 pr-4">
-						For our out of town guests, a select number of rooms have been blocked off at The Dwell Hotel.
-						<br />
-						<small><i>
-							Please call and reference 'Kling/Gillespie Wedding' to receive a
-							discount on your booking.
-						</i></small>
+					<p className="section-header-p mt-5 ml-5 mr-5 mb-1">Accommodations</p>
+						<p className="copy-p col-md-6 mb-5 pl-4 pr-4">
+						For our out of town guests, we've blocked off a select number of
+						rooms at the Staybridge Suites in Downtown Chattanooga (which is conveniently located a block away
+						from the venue).
+						<br/>
+						<small>
+							<i>
+								Please call and reference 'Kling/Gillespie Wedding' to receive a
+								discount on your booking.
+							</i>
+						</small>
 					</p>
-					<br />
-					<img src={Dwell} alt="The Dwell Hotel" className="accom m-2" />
-					<p className="copy-header-p">The Dwell Hotel</p>
+					<div className="things-circle d-flex justify-content-center align-items-center rounded-circle">
+						<i className="far fa-building" />
+					</div>
+					<p className="copy-header-p mt-4 pl-4 pr-4">
+						Staybridge Suites
+					</p>
 					<p className="copy-p">
-						120 E. 10th St.
+						1300 Carter St.
 						<br />
 						Chattanooga, TN 37402
 						<br />
-						432 &middot; 267 &middot; 7866
+						432 &middot; 267 &middot; 0900
 					</p>
-					<a
-						href="http://www.thedwellhotel.com/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						Book Online
-					</a>
 				</div>
 				<hr />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-5">
@@ -201,7 +200,10 @@ class Details extends Component {
 							Becca Lee Bae
 						</a>
 					</p>
-					<p className="copy-p">Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights Reserved.</p>
+					<p className="copy-p">
+						Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights
+						Reserved.
+					</p>
 				</footer>
 			</div>
 		);
