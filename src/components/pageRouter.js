@@ -5,7 +5,6 @@ import Home from "./home";
 import Details from "./details";
 import RSVP from "./rsvp";
 import Registry from "./registry";
-import GuestList from "./guestList";
 import LandingImg from "../assets/main.jpg";
 import E201 from '../assets/engP2-1.jpg';
 import E202 from '../assets/engP2-2.jpg';
@@ -40,18 +39,16 @@ class Router extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			url: "http://localhost:3000",
+			url: "http://localhost:8080",
 			today: moment(),
 			daysUntil: null,
 			// Set rsvpReady to true when invitations are sent
-			rsvpReady: false,
-			listLoaded: false,
+			rsvpReady: true,
 			inputs: {
 				first_name: null,
 				last_name: null,
 				rsvp_status: false
 			},
-			guestList: [],
 			carouselPhotos: [
 				{ src: E201 },
 				{ src: E202 },
@@ -83,10 +80,6 @@ class Router extends Component {
 		};
 		this.changeInput = this.changeInput.bind(this);
 		this.sendRsvp = this.sendRsvp.bind(this);
-		this.removeGuest = this.removeGuest.bind(this);
-		this.getGuestList = this.getGuestList.bind(this);
-		this.sortByStatus = this.sortByStatus.bind(this);
-		this.editGuest = this.editGuest.bind(this);
 	}
 	// Set wedding date countdown
 	componentDidMount() {
@@ -108,7 +101,7 @@ class Router extends Component {
 	changeInput(e, input) {
 		const val = e.target.value;
 		this.setState(prev => {
-			prev.inputs[input] = val.toUpperCase();
+			prev.inputs[input] = val;
 			return prev;
 		});
 	}
@@ -116,7 +109,7 @@ class Router extends Component {
 	sendRsvp(e) {
 		e.preventDefault();
 		axios
-			.post(`${this.state.url}/rsvp`, this.state.inputs)
+			.post(`${this.state.url}/guests`, this.state.inputs)
 			.then(res => {
 				alert("Thanks! Your RSVP has been saved.");
 				window.location.reload();
@@ -124,50 +117,6 @@ class Router extends Component {
 			.catch(err => {
 				console.log("Error: ", err);
 			});
-	}
-	// Get guest list
-	getGuestList() {
-		axios
-			.get(`${this.state.url}/guests`)
-			.then(res => {
-				this.setState({ guestList: res.data, listLoaded: true });
-			})
-			.catch(err => {
-				console.log("Error: ", err);
-			});
-	}
-	// Delete guest
-	removeGuest(e, id) {
-		e.preventDefault();
-		axios
-			.delete(`${this.state.url}/delete_guest/${id}`)
-			.then(res => {
-				alert("Guest deleted.");
-				window.location.reload();
-			})
-			.catch(err => {
-				console.log("Error: ", err);
-			});
-	}
-	// Edit guest RSVP info
-	editGuest(e, id) {
-		e.preventDefault();
-		axios
-			.put(`${this.state.url}/edit/${id}`, this.state.inputs)
-			.then(res => {
-				alert("Guest updated!");
-				window.location.reload();
-			})
-			.catch(err => {
-				console.log("Error: ", err);
-			});
-	}
-	// Sort guests by RSVP status
-	sortByStatus() {
-		var statusList = this.state.guestList.sort((a, b) => {
-			return b.rsvp_status - a.rsvp_status;
-		});
-		this.setState({ guestList: statusList });
 	}
 	render() {
 		return (
@@ -202,21 +151,6 @@ class Router extends Component {
 					)}
 				/>
 				<Route path="/registry" render={props => <Registry {...props} />} />
-				<Route
-					path="/smokedsalmon"
-					render={props => (
-						<GuestList
-							{...props}
-							getGuestList={this.getGuestList}
-							removeGuest={(e, id) => this.removeGuest(e, id)}
-							changeInput={(e, input) => this.changeInput(e, input)}
-							editGuest={(e, id) => this.editGuest(e, id)}
-							sortByStatus={this.sortByStatus}
-							list={this.state.guestList}
-							listLoaded={this.state.listLoaded}
-						/>
-					)}
-				/>
 			</Switch>
 		);
 	}

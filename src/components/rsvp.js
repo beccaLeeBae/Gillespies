@@ -42,7 +42,7 @@ class RSVP extends Component {
 									name="customRadio"
 									className="custom-control-input"
 									autoComplete="off"
-									value={true}
+									value="Attending"
 									onChange={e => this.props.changeInput(e, "rsvp_status")}
 									required
 								/>
@@ -56,7 +56,7 @@ class RSVP extends Component {
 									id="customRadio2"
 									name="customRadio"
 									className="custom-control-input"
-									value={false}
+									value="Not attending"
 									autoComplete="off"
 									onChange={e => this.props.changeInput(e, "rsvp_status")}
 									required
