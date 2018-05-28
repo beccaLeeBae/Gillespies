@@ -42,6 +42,7 @@ class Details extends Component {
 						View On Map
 					</a>
 				</div>
+
 				<hr />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-5">
 					<p className="section-header-p mt-5 ml-5 mr-5 mb-1">Accommodations</p>

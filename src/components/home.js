@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Main from "../assets/engP2-6.jpg";
+import Main from "../assets/engP2-17.jpg";
+import Blueprint from "../assets/blueprint.png";
 import NavBar from "./nav";
 import "../App.css";
 
@@ -88,6 +89,22 @@ class Home extends Component {
 							was awesome chaos.
 						</p>
 					</div>
+				</div>
+				<div className="row d-flex flex-column align-items-center justify-content-center p-5 mb-5">
+					<p className="copy-header-p">
+						Shop Grace &amp; Damon's registry at Blueprint.
+					</p>
+					<a
+						href="https://www.blueprintregistry.com/registry/Gillespie-wedding-registry-10-20-2018"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							src={Blueprint}
+							className="rounded-circle w-25"
+							alt="Blueprint Registry"
+						/>
+					</a>
 				</div>
 				<footer className="nav navbar-fixed-bottom d-flex flex-column align-items-center justify-content-center">
 					<p className="copy-p m-0">

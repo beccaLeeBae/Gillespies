@@ -36,11 +36,6 @@ class Nav extends Component {
                 RSVP
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/registry" className="nav-link">
-                Registry
-              </Link>
-            </li>
           </ul>
         </div>
       </nav>

@@ -4,13 +4,28 @@ import Landing from "./landing";
 import Home from "./home";
 import Details from "./details";
 import RSVP from "./rsvp";
-import Registry from "./registry";
 import LandingImg from "../assets/main.jpg";
 import E201 from '../assets/engP2-1.jpg';
 import E202 from '../assets/engP2-2.jpg';
-import E203 from '../assets/engP2-3.png';
-import E204 from '../assets/engP2-4.png';
+import E203 from '../assets/engP2-3.jpg';
+import E204 from '../assets/engP2-4.jpg';
 import E205 from '../assets/engP2-5.jpg';
+import E206 from '../assets/engP2-6.jpg';
+import E207 from '../assets/engP2-7.jpg';
+import E208 from '../assets/engP2-8.jpg';
+import E209 from '../assets/engP2-9.jpg';
+import E211 from '../assets/engP2-11.jpg';
+import E212 from '../assets/engP2-12.jpg';
+import E213 from '../assets/engP2-13.jpg';
+import E214 from '../assets/engP2-14.jpg';
+import E215 from '../assets/engP2-15.jpg';
+import E216 from '../assets/engP2-16.jpg';
+import E218 from '../assets/engP2-18.jpg';
+import E219 from '../assets/engP2-19.jpg';
+import E220 from '../assets/engP2-20.jpg';
+import E221 from '../assets/engP2-21.jpg';
+import E222 from '../assets/engP2-22.jpg';
+import E223 from '../assets/engP2-23.jpg';
 import E1 from "../assets/engP-100.jpg";
 import E2 from "../assets/engP-116.jpg";
 import E3 from "../assets/engP-13.jpg";
@@ -43,7 +58,7 @@ class Router extends Component {
 			today: moment(),
 			daysUntil: null,
 			// Set rsvpReady to true when invitations are sent
-			rsvpReady: true,
+			rsvpReady: false,
 			inputs: {
 				first_name: null,
 				last_name: null,
@@ -55,6 +70,22 @@ class Router extends Component {
 				{ src: E203 },
 				{ src: E204 },
 				{ src: E205 },
+				{ src: E206 },
+				{ src: E207 },
+				{ src: E208 },
+				{ src: E209 },
+				{ src: E211 },
+				{ src: E212 },
+				{ src: E213 },
+				{ src: E214 },
+				{ src: E215 },
+				{ src: E216 },
+				{ src: E218 },
+				{ src: E219 },
+				{ src: E220 },
+				{ src: E221 },
+				{ src: E222 },
+				{ src: E223 },
 				{ src: E5 },
 				{ src: E1 },
 				{ src: E2 },
@@ -150,7 +181,6 @@ class Router extends Component {
 						/>
 					)}
 				/>
-				<Route path="/registry" render={props => <Registry {...props} />} />
 			</Switch>
 		);
 	}
