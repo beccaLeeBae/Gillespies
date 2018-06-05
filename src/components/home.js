@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Main from "../assets/engP2-17.jpg";
 import Blueprint from "../assets/blueprint.png";
 import NavBar from "./nav";
+import ProgressiveImage from "react-progressive-image";
 import "../App.css";
 
 class Home extends Component {
@@ -23,19 +23,28 @@ class Home extends Component {
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<div
-						id="engagementPhotosCarousel"
+						id="gdphotocarousel"
 						className="carousel slide"
 						data-ride="carousel"
 					>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-								<img className="d-block w-100" src={Main} alt="Grace & Damon" />
+					<ProgressiveImage src='https://i.imgur.com/jP9AJ50.jpg' placeholder='https://i.imgur.com/eNDv9Uk.jpg'>
+					{(src, loading) => (
+						<img
+							style={{ opacity: loading ? 0.5 : 1 }}
+							src={src}
+							alt="Grace & Damon"
+							className="d-block w-100"
+						/>
+					)}
+				</ProgressiveImage>
 							</div>
 							{this.props.renderCarousel()}
 						</div>
 						<a
 							className="carousel-control-prev"
-							href="#engagementPhotosCarousel"
+							href="#gdphotocarousel"
 							role="button"
 							data-slide="prev"
 						>
@@ -44,7 +53,7 @@ class Home extends Component {
 						</a>
 						<a
 							className="carousel-control-next"
-							href="#engagementPhotosCarousel"
+							href="#gdphotocarousel"
 							role="button"
 							data-slide="next"
 						>
@@ -101,7 +110,7 @@ class Home extends Component {
 					>
 						<img
 							src={Blueprint}
-							className="rounded-circle w-25"
+							className="rounded-circle"
 							alt="Blueprint Registry"
 						/>
 					</a>

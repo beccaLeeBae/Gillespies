@@ -14,13 +14,13 @@ class Details extends Component {
 				<NavBar />
 				<Venue />
 				<hr/>
-				<Bridesmaids/>
-				<hr/>
-				<Groomsmen/>
-				<hr />
 				<Accom />
 				<hr />
-				<Things />
+				<Bridesmaids renderBridesmaids={this.props.renderBridesmaids}/>
+				<hr/>
+				<Groomsmen renderGroomsmen={this.props.renderGroomsmen}/>
+				<hr />
+				<Things renderThingsNav={this.props.renderThingsNav} toggleThings={this.props.toggleThings} renderThings={this.props.renderThings} currentThings={this.props.currentThings}/>
 				<footer className="nav navbar-fixed-bottom d-flex flex-column align-items center justify-content-center">
 					<p className="copy-p m-0">
 						Made with &hearts; by{" "}

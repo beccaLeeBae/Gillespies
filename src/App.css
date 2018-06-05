@@ -54,6 +54,7 @@ input[type="text"]:focus {
 }
 hr {
     background-color: #e3dfe0;
+    width: 75%;
 }
 /*Links*/
 a {
@@ -123,18 +124,40 @@ a:hover {
 .things-to-do {
     margin-bottom: -6px;
 }
-.things-circle {
-    background-color: #e3dfe0;
-    width: 65px;
-    height: 65px;
+.things-row {
+    min-height: 293px;
 }
-.things-circle i {
+.thing-button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    color: #e3dfe0;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+.thing-button:hover, .active-thing {
+    cursor: pointer;
+    border-bottom: 1px solid #e3dfe0;
+}
+.card {
+    border: none;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.card-body p, .card-body h5, .card-body h6, .card-body a {
     color: #3b4559;
-    font-size: 30px;
+}
+.card-body a:hover {
+    opacity: .5;
+    color: #3b4559;
 }
 /*Footer*/
 footer {
     font-size: 14px;
+}
+/*Bridal Party Img*/
+.bridal-party:hover {
+    cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
     .landingImg {
