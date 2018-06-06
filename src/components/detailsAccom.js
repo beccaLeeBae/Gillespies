@@ -29,6 +29,14 @@ class DetailsAccom extends Component {
 					<br />
 					423 &middot; 267 &middot; 0900
 				</p>
+				<a
+					href="https://goo.gl/maps/udgf95BVeTK2"
+					target="_blank"
+					rel="noopener noreferrer"
+					className="mb-5"
+				>
+					View On Map
+				</a>
 			</div>
 		);
 	}

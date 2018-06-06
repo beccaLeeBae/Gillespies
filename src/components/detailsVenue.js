@@ -29,6 +29,8 @@ class DetailsVenue extends Component {
 					1400 Fort St.
 					<br />
 					Chattanooga, TN 37402
+					<br />
+					423 &middot; 322 &middot; 0064
 				</p>
 				<a
 					href="https://goo.gl/maps/eNkeqcSPsLy"

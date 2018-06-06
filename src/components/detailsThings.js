@@ -18,4 +18,3 @@ class DetailsThings extends Component {
 }
 
 export default DetailsThings;
-// {this.props.renderThings()}

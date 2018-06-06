@@ -68,7 +68,7 @@ class Router extends Component {
 				{
 					name: "Becca Bae",
 					title: "Maid of Honor",
-					src: "https://i.imgur.com/cbseNi1.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/cbseNi1.png",
 					babyImg: "https://i.imgur.com/Xr2N323.png",
 					bio:
@@ -77,7 +77,7 @@ class Router extends Component {
 				{
 					name: "Molly Clark",
 					title: "Bridesmaid",
-					src: "https://i.imgur.com/EioF2Hh.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/EioF2Hh.png",
 					babyImg: "https://i.imgur.com/KbY2qoY.png",
 					bio:
@@ -86,7 +86,7 @@ class Router extends Component {
 				{
 					name: "Georgina DiFrancesco",
 					title: "Bridesmaid",
-					src: "https://i.imgur.com/XClLQvt.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/XClLQvt.png",
 					babyImg: "https://i.imgur.com/1dfVr8C.png",
 					bio:
@@ -95,7 +95,7 @@ class Router extends Component {
 				{
 					name: "Cara Zelaya",
 					title: "Bridesmaid",
-					src: "https://i.imgur.com/oyVImw6.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/oyVImw6.png",
 					babyImg: "https://i.imgur.com/uSswOew.png",
 					bio:
@@ -104,7 +104,7 @@ class Router extends Component {
 				{
 					name: "Dany Vasquez",
 					title: "Bridesmaid",
-					src: "https://i.imgur.com/xnZgDrG.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/xnZgDrG.png",
 					babyImg: "https://i.imgur.com/uCZYW2K.png",
 					bio: `Dany and the bride have been friends ever since she said "Do you want to attend this movie premiere, and also my birthday in Miami" upon their first meeting.`
@@ -112,7 +112,7 @@ class Router extends Component {
 				{
 					name: "Valerie Payne",
 					title: "Bridesmaid",
-					src: "https://i.imgur.com/CuW7dKO.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/CuW7dKO.png",
 					babyImg: "https://i.imgur.com/Jzkffk8.png",
 					bio:
@@ -121,7 +121,7 @@ class Router extends Component {
 				{
 					name: "Olivia Gonzalez",
 					title: "Junior Bridesmaid",
-					src: "https://i.imgur.com/iEl5fSy.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/iEl5fSy.png",
 					babyImg: "https://i.imgur.com/iEl5fSy.png",
 					bio:
@@ -132,7 +132,7 @@ class Router extends Component {
 				{
 					name: "Bobby Burkich",
 					title: "Best Man",
-					src: "https://i.imgur.com/5un7766.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/5un7766.png",
 					babyImg: "https://i.imgur.com/GLMK8BI.png",
 					bio:
@@ -141,7 +141,7 @@ class Router extends Component {
 				{
 					name: "Chris Burkich",
 					title: "Groomsman",
-					src: "https://i.imgur.com/oK9xFC9.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/oK9xFC9.png",
 					babyImg: "https://i.imgur.com/8gFBe5U.png",
 					bio:
@@ -150,7 +150,7 @@ class Router extends Component {
 				{
 					name: "Davis Wesson",
 					title: "Groomsman",
-					src: "https://i.imgur.com/YD5mLD6.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/YD5mLD6.png",
 					babyImg: "https://i.imgur.com/dyjO2wb.png",
 					bio:
@@ -159,7 +159,7 @@ class Router extends Component {
 				{
 					name: "David Couter",
 					title: "Groomsman",
-					src: "https://i.imgur.com/T4RXQP1.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/T4RXQP1.png",
 					babyImg: "https://i.imgur.com/iknQ4cT.png",
 					bio:
@@ -168,7 +168,7 @@ class Router extends Component {
 				{
 					name: "Rowdy Zeisig",
 					title: "Groomsman",
-					src: "https://i.imgur.com/POjqO3s.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/POjqO3s.png",
 					babyImg: "https://i.imgur.com/4HHmQmI.png",
 					bio:
@@ -177,7 +177,7 @@ class Router extends Component {
 				{
 					name: "Steven Hullander",
 					title: "Groomsman",
-					src: "https://i.imgur.com/QWgZYue.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/QWgZYue.png",
 					babyImg: "https://i.imgur.com/85zVoho.png",
 					bio: `Damon's cousin "Boog" has been like a little brother since he was born. They learned how to jump off roofs together and raise hell for their entire family.`
@@ -185,7 +185,7 @@ class Router extends Component {
 				{
 					name: "Benjamin Gonzalez",
 					title: "Junior Groomsman",
-					src: "https://i.imgur.com/iEl5fSy.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/iEl5fSy.png",
 					babyImg: "https://i.imgur.com/iEl5fSy.png",
 					bio:
@@ -194,7 +194,7 @@ class Router extends Component {
 				{
 					name: "Joseph Ferrarelli",
 					title: "Officiant",
-					src: "https://i.imgur.com/n5uHile.png",
+					hoverStatus: false,
 					currentImg: "https://i.imgur.com/n5uHile.png",
 					babyImg: "https://i.imgur.com/iEl5fSy.png",
 					bio:
@@ -276,20 +276,28 @@ class Router extends Component {
 				}
 			],
 			thingsNav: [
-			{name: 'food',
-			icon: 'utensils'},
-			{name: 'drinks',
-			icon: 'glass-martini'},
-			{name: 'fun',
-			icon: 'ticket-alt'}]
+				{
+					name: "food",
+					icon: "utensils"
+				},
+				{
+					name: "drinks",
+					icon: "glass-martini"
+				},
+				{
+					name: "fun",
+					icon: "ticket-alt"
+				}
+			]
 		};
 		this.changeInput = this.changeInput.bind(this);
 		this.sendRsvp = this.sendRsvp.bind(this);
 		this.handleMouseEnter = this.handleMouseEnter.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
-		this.renderThingsNav = this.renderThingsNav.bind(this);
+		this.renderParty = this.renderParty.bind(this);
 		this.renderThings = this.renderThings.bind(this);
 		this.toggleThings = this.toggleThings.bind(this);
+		this.renderThingsNav = this.renderThingsNav.bind(this);
 	}
 	// Set wedding date countdown
 	componentDidMount() {
@@ -297,13 +305,13 @@ class Router extends Component {
 		var days = weddingDate.diff(this.state.today, "days");
 		this.setState({ daysUntil: days });
 	}
-	handleMouseEnter(i, side) {
-		side[i].src = side[i].babyImg;
-		this.setState({ side });
+	handleMouseEnter(i, p) {
+		p[i].hoverStatus = true;
+		this.setState({ p });
 	}
-	handleMouseLeave(i, side) {
-		side[i].src = side[i].currentImg;
-		this.setState({ side });
+	handleMouseLeave(i, p) {
+		p[i].hoverStatus = false;
+		this.setState({ p });
 	}
 	// Engagement photos carousel
 	renderCarousel() {
@@ -315,44 +323,29 @@ class Router extends Component {
 			);
 		});
 	}
-	// Render bridesmaids info
-	renderBridesmaids() {
-		const br = this.state.bridesmaids;
-		return br.map((b, index) => {
+	// Render wedding party info
+	renderParty(side) {
+		let party = "";
+		if (side === "gr") {
+			party = this.state.groomsmen;
+		} else {
+			party = this.state.bridesmaids;
+		};
+
+		return party.map((p, index) => {
 			const i = index;
 			return (
 				<div key={index} className="col-md-6 col-lg-4 p-4">
 					<img
-						src={br[i].src}
+						src={party[i].hoverStatus ? party[i].babyImg : party[i].currentImg}
 						className="bridal-party rounded-circle mb-2"
-						alt={b.name}
-						onMouseEnter={() => this.handleMouseEnter(i, br)}
-						onMouseLeave={() => this.handleMouseLeave(i, br)}
+						alt={p.name}
+						onMouseEnter={() => this.handleMouseEnter(i, party)}
+						onMouseLeave={() => this.handleMouseLeave(i, party)}
 					/>
-					<p className="copy-header-p m-0">{b.name}</p>
-					<p className="copy-p">{b.title}</p>
-					<p className="copy-p mb-5 pl-4 pr-4">{b.bio}</p>
-				</div>
-			);
-		});
-	}
-	// Render groomsmen info
-	renderGroomsmen() {
-		const gr = this.state.groomsmen;
-		return gr.map((g, index) => {
-			const i = index;
-			return (
-				<div key={index} className="col-md-6 col-lg-4 p-4">
-					<img
-						src={gr[i].src}
-						className="bridal-party rounded-circle mb-2"
-						alt={g.name}
-						onMouseEnter={() => this.handleMouseEnter(i, gr)}
-						onMouseLeave={() => this.handleMouseLeave(i, gr)}
-					/>
-					<p className="copy-header-p m-0">{g.name}</p>
-					<p className="copy-p">{g.title}</p>
-					<p className="copy-p mb-5 pl-4 pr-4">{g.bio}</p>
+					<p className="copy-header-p m-0">{p.name}</p>
+					<p className="copy-p">{p.title}</p>
+					<p className="copy-p mb-5 pl-4 pr-4">{p.bio}</p>
 				</div>
 			);
 		});
@@ -366,11 +359,14 @@ class Router extends Component {
 		return this.state.thingsNav.map((thing, index) => {
 			const icon = `fas fa-${thing.icon}`;
 			const t = thing.name;
-			// console.log(this.state.currentThings, thing.name);
 			return (
 				<button
 					key={index}
-					className={this.state.currentThings === t ? "thing-button active-thing mr-2 p-2" : "thing-button mr-2 p-2"}
+					className={
+						this.state.currentThings === t
+							? "thing-button active-thing mr-2 p-2"
+							: "thing-button mr-2 p-2"
+					}
 					onClick={() => this.toggleThings(t)}
 				>
 					<i className={icon} /> {t}
@@ -448,8 +444,7 @@ class Router extends Component {
 					path="/details"
 					render={props => (
 						<Details
-							renderBridesmaids={this.renderBridesmaids.bind(this)}
-							renderGroomsmen={this.renderGroomsmen.bind(this)}
+							renderParty={this.renderParty}
 							renderThings={this.renderThings}
 							renderThingsNav={this.renderThingsNav}
 							currentThings={this.state.currentThings}

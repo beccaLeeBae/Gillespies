@@ -124,6 +124,15 @@ a:hover {
 .things-to-do {
     margin-bottom: -6px;
 }
+.things-circle {
+    background-color: #e3dfe0;
+    width: 65px;
+    height: 65px;
+}
+.things-circle i {
+    color: #3b4559;
+    font-size: 30px;
+}
 .things-row {
     min-height: 293px;
 }
