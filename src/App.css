@@ -77,22 +77,24 @@ a:hover {
 .nav-item a {
     font-size: 18px;
 }
-/*LandingPage*/
-.landingPage p:nth-child(1) {
+/*landing page*/
+.landing-page p:nth-child(1) {
     font-size: 100px;
     line-height: 110px;
 }
-.landingPage p:nth-child(2) {
-    font-size: 22px;
+#landing-date {
+    font-size: 20px;
+    font-family: "futura-pt", sans-serif;
+    font-weight: 300;
 }
-.landingPage button {
+.landing-page button {
     border: 1px solid #e3dfe0;
     background-color: #e3dfe0;
     color: #3b4559;
-    margin-top: 50px;
     font-size: 22px;
+    padding: 10px 20px;
 }
-.landingPage button:hover {
+.landing-page button:hover, .landing-page button:active {
     border: 1px solid #e3dfe0;
     background-color: #3b4559;
     color: #e3dfe0;
@@ -118,6 +120,9 @@ a:hover {
     font-size: 24px;
 }
 /*Homepage*/
+.venue-img {
+    width: 55%;
+}
 .accom {
     width: 35%;
 }
@@ -172,15 +177,15 @@ footer {
     .landingImg {
         display: none;
     }
-    .landingPage p:nth-child(1) {
+    .landing-page p:nth-child(1) {
         font-size: 80px;
         line-height: 80px;
     }
 
-    .landingPage p:nth-child(2) {
+    .landing-page p:nth-child(2) {
         font-size: 20px;
     }
-    .accom {
+    .accom, .venue-img {
         width: 75%;
     }
 }

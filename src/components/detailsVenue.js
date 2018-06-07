@@ -15,8 +15,8 @@ class DetailsVenue extends Component {
 						<img
 							style={{ opacity: loading ? 0.5 : 1 }}
 							src={src}
-							alt=""
-							className="w-50 mb-5"
+							alt="The Turnbull"
+							className="venue-img mb-5"
 						/>
 					)}
 				</ProgressiveImage>
