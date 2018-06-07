@@ -122,8 +122,8 @@ class Router extends Component {
 					name: "Olivia Gonzalez",
 					title: "Junior Bridesmaid",
 					hoverStatus: false,
-					currentImg: "https://i.imgur.com/iEl5fSy.png",
-					babyImg: "https://i.imgur.com/iEl5fSy.png",
+					currentImg: "https://i.imgur.com/yvgeCWL.png",
+					babyImg: "https://i.imgur.com/wKSzuj3.png",
 					bio:
 						"O met the bride when she was only 7 years old and was called a mini-me until she out grew her! Grace considers her a little sister, and is sorry to her mother she made her such a cheese snob."
 				}
@@ -134,7 +134,7 @@ class Router extends Component {
 					title: "Best Man",
 					hoverStatus: false,
 					currentImg: "https://i.imgur.com/5un7766.png",
-					babyImg: "https://i.imgur.com/GLMK8BI.png",
+					babyImg: "https://i.imgur.com/nwO5fnZ.png",
 					bio:
 						"Bobby has been Damon's best bro since puberty: they're truly inseparable. Even being on different coasts doesn't keep them from playing Xbox and running lines for scenes together."
 				},
@@ -186,8 +186,8 @@ class Router extends Component {
 					name: "Benjamin Gonzalez",
 					title: "Junior Groomsman",
 					hoverStatus: false,
-					currentImg: "https://i.imgur.com/iEl5fSy.png",
-					babyImg: "https://i.imgur.com/iEl5fSy.png",
+					currentImg: "https://i.imgur.com/uRon8s4.png",
+					babyImg: "https://i.imgur.com/68EbcBP.png",
 					bio:
 						"Ben met the bride when he was 5 years old and has been her other little brother ever since. Ben is amazing in a suit and rivals Damon as a Michael Jackson impersonator."
 				},
@@ -196,7 +196,7 @@ class Router extends Component {
 					title: "Officiant",
 					hoverStatus: false,
 					currentImg: "https://i.imgur.com/n5uHile.png",
-					babyImg: "https://i.imgur.com/iEl5fSy.png",
+					babyImg: "https://i.imgur.com/LuslkZI.png",
 					bio:
 						"Joe Ferrarelli was an accidental roommate of the bride and groom. The trio's love of discussing film and theatre blossomed, so much so that Grace and Damon they fought over him being on the groom's or bride's side of the wedding party. In the end, they decided to ask him to marry them instead."
 				}
@@ -305,10 +305,12 @@ class Router extends Component {
 		var days = weddingDate.diff(this.state.today, "days");
 		this.setState({ daysUntil: days });
 	}
+	// Mouseover event to show baby photo of wedding party member
 	handleMouseEnter(i, p) {
 		p[i].hoverStatus = true;
 		this.setState({ p });
 	}
+	// Mouseover event to return to current photo of wedding party member
 	handleMouseLeave(i, p) {
 		p[i].hoverStatus = false;
 		this.setState({ p });
@@ -350,11 +352,12 @@ class Router extends Component {
 			);
 		});
 	}
-	// Toggle Things To Do
+	// Toggle things to do (click event to set item as the current tab)
 	toggleThings(type) {
 		this.setState({ currentThings: type });
 	}
-	// Render Things To Do Nav
+	// Render things to do nav bar
+	// Highlight current type
 	renderThingsNav() {
 		return this.state.thingsNav.map((thing, index) => {
 			const icon = `fas fa-${thing.icon}`;
@@ -374,7 +377,7 @@ class Router extends Component {
 			);
 		});
 	}
-	// Render Things To Do
+	// Render things to do
 	renderThings(type) {
 		return this.state.thingsToDo.map((place, index) => {
 			if (place.type === type) {
@@ -422,6 +425,7 @@ class Router extends Component {
 				console.log("Error: ", err);
 			});
 	}
+	// Render routes for landing, home, details, RSVP
 	render() {
 		return (
 			<Switch>

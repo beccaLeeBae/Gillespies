@@ -12,14 +12,28 @@ class Details extends Component {
 			<div className="container-fluid">
 				<NavBar />
 				<Venue />
-				<hr/>
+				<hr />
 				<Accom />
 				<hr />
-				<WeddingParty renderParty={this.props.renderParty} side={'br'} title={"Bridesmaids"}/>
-				<hr/>
-				<WeddingParty renderParty={this.props.renderParty} side={'gr'} title={"Groomsmen"}/>
+				<WeddingParty
+					renderParty={this.props.renderParty}
+					side={"br"}
+					title={"Bridesmaids"}
+				/>
 				<hr />
-				<Things renderThingsNav={this.props.renderThingsNav} toggleThings={this.props.toggleThings} renderThings={this.props.renderThings} currentThings={this.props.currentThings}/>
+				<WeddingParty
+					renderParty={this.props.renderParty}
+					side={"gr"}
+					title={"Groomsmen"}
+				/>
+				<hr />
+				<Things
+					title={"Things To Do in Chattanooga"}
+					renderThingsNav={this.props.renderThingsNav}
+					toggleThings={this.props.toggleThings}
+					renderThings={this.props.renderThings}
+					currentThings={this.props.currentThings}
+				/>
 				<footer className="nav navbar-fixed-bottom d-flex flex-column align-items center justify-content-center">
 					<p className="copy-p m-0">
 						Made with &hearts; by{" "}

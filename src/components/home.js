@@ -29,16 +29,19 @@ class Home extends Component {
 					>
 						<div className="carousel-inner">
 							<div className="carousel-item active">
-					<ProgressiveImage src='https://i.imgur.com/jP9AJ50.jpg' placeholder='https://i.imgur.com/eNDv9Uk.jpg'>
-					{(src, loading) => (
-						<img
-							style={{ opacity: loading ? 0.5 : 1 }}
-							src={src}
-							alt="Grace & Damon"
-							className="d-block w-100"
-						/>
-					)}
-				</ProgressiveImage>
+								<ProgressiveImage
+									src="https://i.imgur.com/jP9AJ50.jpg"
+									placeholder="https://i.imgur.com/eNDv9Uk.jpg"
+								>
+									{(src, loading) => (
+										<img
+											style={{ opacity: loading ? 0.5 : 1 }}
+											src={src}
+											alt="Grace & Damon"
+											className="d-block w-100"
+										/>
+									)}
+								</ProgressiveImage>
 							</div>
 							{this.props.renderCarousel()}
 						</div>

@@ -16,7 +16,7 @@ class DetailsVenue extends Component {
 							style={{ opacity: loading ? 0.5 : 1 }}
 							src={src}
 							alt=""
-							className="w-75 mb-5"
+							className="w-50 mb-5"
 						/>
 					)}
 				</ProgressiveImage>

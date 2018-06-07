@@ -7,7 +7,7 @@ class DetailsWeddingParty extends Component {
 			<div className="row d-flex flex-column justify-content-center align-items-center">
 				<p className="section-header-p m-5">The {this.props.title}</p>
 				<div className="row w-100">
-				{this.props.renderParty(this.props.side)}
+					{this.props.renderParty(this.props.side)}
 				</div>
 			</div>
 		);
