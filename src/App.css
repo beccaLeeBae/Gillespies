@@ -5,6 +5,9 @@ body {
 .container-fluid {
     height: 100vh;
 }
+.oxford-blue {
+    color: #3B4559;
+}
 /*Buttons/Inputs/Divider*/
 button:focus {
     outline: none;
@@ -21,18 +24,16 @@ button:focus {
     cursor: pointer;
 }
 .form-control::-webkit-input-placeholder { /* Chrome */
-  color: white;
+  color: rgba(250,250,250,.5);
 }
 .form-control:-ms-input-placeholder { /* IE 10+ */
-  color: white;
+  color: rgba(250,250,250,.5);
 }
 .form-control::-moz-placeholder { /* Firefox 19+ */
-  color: white;
-  opacity: 1;
+  color: rgba(250,250,250,.5);
 }
 .form-control:-moz-placeholder { /* Firefox 4 - 18 */
-  color: white;
-  opacity: 1;
+  color: rgba(250,250,250,.5);
 }
 input[type="text"] {
     border: none;
@@ -165,6 +166,15 @@ a:hover {
     opacity: .5;
     color: #3b4559;
 }
+.modal-header {
+    border-bottom: none!important;
+}
+.modal-body {
+    margin: 25px 0px 10px 0px;
+}
+.modal-footer {
+    border-top: none!important;
+}
 /*Footer*/
 footer {
     font-size: 14px;
@@ -173,7 +183,34 @@ footer {
 .bridal-party:hover {
     cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
+/*RSVP buttons*/
+.rsvp-content {
+    min-height: calc(100vh - 101px)
+}
+.admit-btn {
+    border: none;
+    background-color: white;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: cornflowerblue;
+    transition: 0.2s;
+}
+
+.admit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.admit-btn::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f3ff";
+    font-weight: 900;
+}
+@media only screen and (max-width: 800px) {
     .landingImg {
         display: none;
     }
@@ -187,5 +224,9 @@ footer {
     }
     .accom, .venue-img {
         width: 75%;
+    }
+    form {
+        width: 100%;
+        padding:20px;
     }
 }

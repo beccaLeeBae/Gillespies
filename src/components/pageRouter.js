@@ -16,8 +16,10 @@ class Router extends Component {
 			url: "http://localhost:8080",
 			today: moment(),
 			daysUntil: null,
-			// Set rsvpReady to true when invitations are sent
-			rsvpReady: false,
+			rsvpReady: true,
+			admitNum: 0,
+			admitText0: "First Name",
+			admitText1: "Last Name",
 			inputs: {
 				first_name: null,
 				last_name: null,
@@ -114,7 +116,7 @@ class Router extends Component {
 					title: "Bridesmaid",
 					hoverStatus: false,
 					currentImg: "https://i.imgur.com/CuW7dKO.png",
-					babyImg: "https://i.imgur.com/Jzkffk8.png",
+					babyImg: "https://i.imgur.com/6BXgRmc.png",
 					bio:
 						"Valerie is her number one lady cuzzo. She is a fellow Georgia peach. As they've gotten older they've become even closer and are even harder to tell apart."
 				},
@@ -125,7 +127,7 @@ class Router extends Component {
 					currentImg: "https://i.imgur.com/yvgeCWL.png",
 					babyImg: "https://i.imgur.com/wKSzuj3.png",
 					bio:
-						"O met the bride when she was only 7 years old and was called a mini-me until she out grew her! Grace considers her a little sister, and is sorry to her mother she made her such a cheese snob."
+						"O met the bride when she was only 7 years old and was called her mini me until she outgrew her! Grace still considers her a little sister, and is sorry to her mother she made her such a cheese snob."
 				}
 			],
 			groomsmen: [
@@ -170,7 +172,7 @@ class Router extends Component {
 					title: "Groomsman",
 					hoverStatus: false,
 					currentImg: "https://i.imgur.com/POjqO3s.png",
-					babyImg: "https://i.imgur.com/4HHmQmI.png",
+					babyImg: "https://i.imgur.com/iaCor71.jpg",
 					bio:
 						"The bride's little bro and the groom have been brothers since they first met five years ago. They enjoy memes and nerding out."
 				},
@@ -259,7 +261,7 @@ class Router extends Component {
 					type: "fun"
 				},
 				{
-					name: "Tenneesee Aquarium",
+					name: "Tennessee Aquarium",
 					desc: "Aquarium",
 					url: "https://www.tnaqua.org/",
 					street: "1 Broad St.",
@@ -332,7 +334,7 @@ class Router extends Component {
 			party = this.state.groomsmen;
 		} else {
 			party = this.state.bridesmaids;
-		};
+		}
 
 		return party.map((p, index) => {
 			const i = index;
@@ -404,6 +406,24 @@ class Router extends Component {
 			}
 		});
 	}
+	// Change numbers of guests
+	changeAdmitNum(num) {
+		if (num === 1) {
+			this.setState({ admitNum: num });
+		} else if (num === 2) {
+			this.setState({
+				admitNum: num,
+				admitText0: "Guest 1",
+				admitText1: "Guest 2"
+			});
+		} else {
+			this.setState({
+				admitNum: num,
+				admitText0: "All First Names",
+				admitText1: "Last Name"
+			});
+		}
+	}
 	// Grab RSVP input data
 	changeInput(e, input) {
 		const val = e.target.value;
@@ -418,8 +438,11 @@ class Router extends Component {
 		axios
 			.post(`${this.state.url}/guests`, this.state.inputs)
 			.then(res => {
-				alert("Thanks! Your RSVP has been saved.");
-				window.location.reload();
+				alert(
+					"Your RSVP has been successfully recorded. We look forward to sharing our special day with you on October 20th!\n\nGrace & Damon"
+				);
+				this.setState({ admitNum: 0 });
+				window.history.back();
 			})
 			.catch(err => {
 				console.log("Error: ", err);
@@ -462,6 +485,10 @@ class Router extends Component {
 						<RSVP
 							{...props}
 							rsvpReady={this.state.rsvpReady}
+							admitNum={this.state.admitNum}
+							admitText0={this.state.admitText0}
+							admitText1={this.state.admitText1}
+							changeAdmitNum={this.changeAdmitNum.bind(this)}
 							changeInput={(e, input) => this.changeInput(e, input)}
 							sendRsvp={e => {
 								this.sendRsvp(e);

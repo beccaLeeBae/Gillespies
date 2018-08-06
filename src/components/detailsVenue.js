@@ -21,8 +21,7 @@ class DetailsVenue extends Component {
 					)}
 				</ProgressiveImage>
 				<p className="copy-p mb-5 pl-4 pr-4">
-					Please join us for the ceremony on October 20th, followed by a
-					cocktail hour and reception.
+					Please join us for the ceremony on October 20th at 5:15PM with a reception to follow.
 				</p>
 				<p className="copy-header-p">The Turnbull Building</p>
 				<p className="copy-p">
