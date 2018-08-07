@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Landing from "./landing";
 import Home from "./home";
 import Details from "./details";
+import Registry from './registry';
 import RSVP from "./rsvp";
 import LandingImg from "../assets/main.jpg";
 import moment from "moment";
@@ -16,7 +17,7 @@ class Router extends Component {
 			url: "http://localhost:8080",
 			today: moment(),
 			daysUntil: null,
-			rsvpReady: true,
+			rsvpReady: false,
 			admitNum: 0,
 			admitText0: "First Name",
 			admitText1: "Last Name",
@@ -496,6 +497,8 @@ class Router extends Component {
 						/>
 					)}
 				/>
+				<Route path="/registry"
+				render={props => (<Registry/>)}/>
 			</Switch>
 		);
 	}

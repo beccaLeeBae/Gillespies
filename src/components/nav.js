@@ -32,6 +32,11 @@ class Nav extends Component {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/registry" className="nav-link">
+                Registry
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/rsvp" className="nav-link">
                 RSVP
               </Link>
