@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Landing from "./landing";
 import Home from "./home";
 import Details from "./details";
-import Registry from './registry';
+import Registry from "./registry";
 import RSVP from "./rsvp";
 import LandingImg from "../assets/main.jpg";
 import moment from "moment";
@@ -14,10 +14,10 @@ class Router extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			url: "http://localhost:8080",
+			url: "https://graceanddamon.herokuapp.com",
 			today: moment(),
 			daysUntil: null,
-			rsvpReady: false,
+			rsvpReady: true,
 			admitNum: 0,
 			admitText0: "First Name",
 			admitText1: "Last Name",
@@ -436,16 +436,28 @@ class Router extends Component {
 	// Post RSVP input data
 	sendRsvp(e) {
 		e.preventDefault();
+
+		let alertMsg;
+
+		if (this.state.inputs.rsvp_status === "ATTENDING") {
+			alertMsg =
+				"Your RSVP has been successfully recorded. We look forward to sharing our special day with you on October 20th!\n\nGrace & Damon";
+		} else {
+			alertMsg =
+				"Thank you for confirming that you can't attend, we're sorry you won't be able to make it to our special day. We hope to see you very soon!\n\nGrace & Damon";
+		}
+
 		axios
 			.post(`${this.state.url}/guests`, this.state.inputs)
 			.then(res => {
-				alert(
-					"Your RSVP has been successfully recorded. We look forward to sharing our special day with you on October 20th!\n\nGrace & Damon"
-				);
+				alert(alertMsg);
 				this.setState({ admitNum: 0 });
-				window.history.back();
 			})
 			.catch(err => {
+				alert(
+					"We've encountered an error while trying to record your RSVP. Please try again later."
+				);
+				// window.location.reload();
 				console.log("Error: ", err);
 			});
 	}
@@ -497,8 +509,7 @@ class Router extends Component {
 						/>
 					)}
 				/>
-				<Route path="/registry"
-				render={props => (<Registry/>)}/>
+				<Route path="/registry" render={props => <Registry />} />
 			</Switch>
 		);
 	}

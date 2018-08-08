@@ -7,7 +7,7 @@ import "../App.css";
 class Registry extends Component {
 	render() {
 		return (
-			<div className="container">
+			<div className="container-fluid">
 				<NavBar />
 				<div className="row rsvp-content h-75 d-flex flex-column justify-content-center align-items-center">
 					<p className="copy-header-p">

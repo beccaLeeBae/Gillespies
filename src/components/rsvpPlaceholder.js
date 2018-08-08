@@ -5,7 +5,7 @@ class RsvpPlaceholder extends Component {
 	render() {
 		return (
 			<div className="row rsvp-content h-75 d-flex flex-column justify-content-center align-items-center">
-				<p className="copy-header-p">Coming in August.</p>
+				<p className="copy-header-p">Coming Soon</p>
 				<div className="things-circle d-flex justify-content-center align-items-center rounded-circle">
 					<i className="far fa-envelope" />
 				</div>
