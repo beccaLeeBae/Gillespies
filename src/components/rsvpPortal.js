@@ -8,11 +8,12 @@ class RsvpPortal extends Component {
 		return (
 			<div className="row rsvp-content d-flex flex-column justify-content-start align-items-center">
 				<p className="section-header-p mt-5">RSVP</p>
-				<p className="copy-p p-3 mb-4">
+				<p className="copy-p pt-3 pl-3 pr-3 m-0">
 					{admitNum === 0
 						? "Please select the number of allowed guests from your invitation."
 						: "Kindly RSVP before August 31. Thank you!"}
 				</p>
+				<small className="m-0 mb-4 pl-3 pr-3">For any questions, please email <a href="mailto:admin@graceanddamon.com">admin@graceanddamon.com</a>.</small>
 				{admitNum === 0 ? (
 					<div className="d-flex flex-column">
 						<button
@@ -101,10 +102,10 @@ class RsvpPortal extends Component {
 							</label>
 						</div>
 						<button
-							onClick={e => this.props.sendRsvp(e)}
 							className="mt-4 mb-5 mini-button"
+							disabled={this.props.rsvpSending}
 						>
-							RSVP
+							{this.props.rsvpSending ? "Sending..." : "RSVP"}
 						</button>
 					</form>
 				)}

@@ -26,6 +26,7 @@ class Router extends Component {
 				last_name: null,
 				rsvp_status: false
 			},
+			rsvpSending: false,
 			currentThings: "food",
 			carouselPhotos: [
 				{ src: "https://i.imgur.com/PX6Iq0E.jpg" },
@@ -447,17 +448,18 @@ class Router extends Component {
 				"Thank you for confirming that you can't attend, we're sorry you won't be able to make it to our special day. We hope to see you very soon!\n\nGrace & Damon";
 		}
 
+		this.setState({ rsvpSending: true });
+
 		axios
 			.post(`${this.state.url}/guests`, this.state.inputs)
 			.then(res => {
 				alert(alertMsg);
-				this.setState({ admitNum: 0 });
+				this.setState({ admitNum: 0, rsvpSending: false });
 			})
 			.catch(err => {
 				alert(
-					"We've encountered an error while trying to record your RSVP. Please try again later."
+					"We've encountered an error while trying to record your RSVP. Please try again later or send an email to admin@graceanddamon.com."
 				);
-				// window.location.reload();
 				console.log("Error: ", err);
 			});
 	}
@@ -506,6 +508,7 @@ class Router extends Component {
 							sendRsvp={e => {
 								this.sendRsvp(e);
 							}}
+							rsvpSending={this.state.rsvpSending}
 						/>
 					)}
 				/>
