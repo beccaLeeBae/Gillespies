@@ -1,0 +1,64 @@
+[
+				{
+					"name": "Bobby Burkich",
+					"title": "Best Man",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/5un7766.png",
+					"babyImg": "https://i.imgur.com/nwO5fnZ.png",
+					"bio":
+						"Bobby has been Damon's best bro since puberty: they're truly inseparable. Even being on different coasts doesn't keep them from playing Xbox and running lines for scenes together."
+				},
+				{
+					"name": "Chris Burkich",
+					"title": "Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/oK9xFC9.png",
+					"babyImg": "https://i.imgur.com/8gFBe5U.png",
+					"bio":
+						"The best man's little brother doesn't fall far from the tree. These guys have been practically family ever since they all attended the Chattanooga Center for the Arts."
+				},
+				{
+					"name": "Davis Wesson",
+					"title": "Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/YD5mLD6.png",
+					"babyImg": "https://i.imgur.com/dyjO2wb.png",
+					"bio":
+						"These two have been rapping and hanging for years. They grew up in music and haven't stopped making each other laugh."
+				},
+				{
+					"name": "David Couter",
+					"title": "Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/T4RXQP1.png",
+					"babyImg": "https://i.imgur.com/iknQ4cT.png",
+					"bio":
+						"David and Damon have been friends and enemies ever since they learned how to dance, tap, and act together. David is the Genie to his Aladdin, the Tarzan to his Turk."
+				},
+				{
+					"name": "Rowdy Zeisig",
+					"title": "Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/POjqO3s.png",
+					"babyImg": "https://i.imgur.com/iaCor71.jpg",
+					"bio":
+						"The bride's little bro and the groom have been brothers since they first met five years ago. They enjoy memes and nerding out."
+				},
+				{
+					"name": "Steven Hullander",
+					"title": "Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/QWgZYue.png",
+					"babyImg": "https://i.imgur.com/85zVoho.png",
+					"bio": "Damon's cousin 'Boog' has been like a little brother since he was born. They learned how to jump off roofs together and raise hell for their entire family."
+				},
+				{
+					"name": "Benjamin Gonzalez",
+					"title": "Junior Groomsman",
+					"hoverStatus": false,
+					"currentImg": "https://i.imgur.com/uRon8s4.png",
+					"babyImg": "https://i.imgur.com/68EbcBP.png",
+					"bio":
+						"Ben met the bride when he was 5 years old and has been her other little brother ever since. Ben is amazing in a suit and rivals Damon as a Michael Jackson impersonator."
+				}
+			]

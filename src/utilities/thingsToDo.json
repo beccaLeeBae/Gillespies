@@ -1,0 +1,74 @@
+[
+				{
+					"name": "Urban Stack",
+					"desc": "Burger Joint",
+					"url": "https://urbanstack.com/",
+					"street": "12 W.13th St.",
+					"zip": 37402,
+					"type": "food"
+				},
+				{
+					"name": "Public House Chattanooga",
+					"desc": "American Restaurant",
+					"url": "https://publichousechattanooga.com",
+					"street": "1110 Market St.",
+					"zip": 37402,
+					"type": "food"
+				},
+				{
+					"name": "Good Dog",
+					"desc": "Hot Dog Joint",
+					"url": "https://www.eatatgooddog.com",
+					"street": "34 Frazier Ave.",
+					"zip": 37405,
+					"type": "food"
+				},
+				{
+					"name": "Easy Bistro & Bar",
+					"desc": "Cocktail Bar",
+					"url": "http://www.easybistro.com/",
+					"street": "203 Broad St.",
+					"zip": 37402,
+					"type": "drinks"
+				},
+				{
+					"name": "Flying Squirrel",
+					"desc": "Cocktail Bar",
+					"url": "http://www.flyingsquirrelbar.com/phone/cocktails.html",
+					"street": "55 Johnson St.",
+					"zip": 37408,
+					"type": "drinks"
+				},
+				{
+					"name": "Southside Social",
+					"desc": "Pub & Bowling Alley",
+					"url": "http://thesouthsidesocial.com/",
+					"street": "1818 Chestnut St.",
+					"zip": 37408,
+					"type": "drinks"
+				},
+				{
+					"name": "Hunter Museum",
+					"desc": "American Art Gallery",
+					"url": "http://www.huntermuseum.org/",
+					"street": "10 Bluff View St.",
+					"zip": 37403,
+					"type": "fun"
+				},
+				{
+					"name": "Tennessee Aquarium",
+					"desc": "Aquarium",
+					"url": "https://www.tnaqua.org/",
+					"street": "1 Broad St.",
+					"zip": 37402,
+					"type": "fun"
+				},
+				{
+					"name": "Coolidge Park",
+					"desc": "Park",
+					"url": "https://www.chattanoogafun.com/listing/coolidge-park/1271/",
+					"street": "150 River St.",
+					"zip": 37405,
+					"type": "fun"
+				}
+			]

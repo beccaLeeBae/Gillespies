@@ -25,7 +25,7 @@ class DetailsVenue extends Component {
 				</p>
 				<p className="copy-header-p">The Turnbull Building</p>
 				<p className="copy-p">
-					1400 Fort St.
+					1401 Fort St.
 					<br />
 					Chattanooga, TN 37402
 					<br />

@@ -16,7 +16,7 @@ class Footer extends Component {
 					</a>
 				</p>
 				<p className="copy-p">
-					Copyright &copy; 2018 Grace Kling & Damon Gillespie. All Rights
+					Copyright &copy; 2019 Grace Kling & Damon Gillespie. All Rights
 					Reserved.
 				</p>
 			</footer>

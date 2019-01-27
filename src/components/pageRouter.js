@@ -17,7 +17,7 @@ class Router extends Component {
 			url: "https://graceanddamon.herokuapp.com",
 			today: moment(),
 			daysUntil: null,
-			rsvpReady: true,
+			rsvpReady: false,
 			admitNum: 0,
 			admitText0: "First Name",
 			admitText1: "Last Name",
@@ -98,7 +98,7 @@ class Router extends Component {
 				},
 				{
 					name: "Cara Zelaya",
-					title: "Bridesmaid",
+					title: "Bridesmaid/Officiant",
 					hoverStatus: false,
 					currentImg: "https://i.imgur.com/oyVImw6.png",
 					babyImg: "https://i.imgur.com/uSswOew.png",
@@ -194,15 +194,6 @@ class Router extends Component {
 					babyImg: "https://i.imgur.com/68EbcBP.png",
 					bio:
 						"Ben met the bride when he was 5 years old and has been her other little brother ever since. Ben is amazing in a suit and rivals Damon as a Michael Jackson impersonator."
-				},
-				{
-					name: "Joseph Ferrarelli",
-					title: "Officiant",
-					hoverStatus: false,
-					currentImg: "https://i.imgur.com/n5uHile.png",
-					babyImg: "https://i.imgur.com/LuslkZI.png",
-					bio:
-						"Joe Ferrarelli was an accidental roommate of the bride and groom. The trio's love of discussing film and theatre blossomed, so much so that Grace and Damon they fought over him being on the groom's or bride's side of the wedding party. In the end, they decided to ask him to marry them instead."
 				}
 			],
 			thingsToDo: [

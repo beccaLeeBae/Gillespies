@@ -11,15 +11,9 @@ class Home extends Component {
 				<NavBar />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<p className="section-header-p m-0 mt-5 pt-5">
-						Introducing Mr. & Mrs. Gillespie
+						Introducing The Gillespie
 					</p>
-					{this.props.daysUntil > 0 && (
-						<p className="copy-p pb-5 mb-5">in {this.props.daysUntil} days</p>
-					)}
-					{this.props.daysUntil === 0 && <p className="copy-p mb-5">today!</p>}
-					{this.props.daysUntil < 0 && (
-						<p className="copy-p mb-5 pb-5">est. Oct. 20, 2018</p>
-					)}
+					<p className="copy-p pb-5 mb-5">est. October 20, 2018</p>
 				</div>
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<div
