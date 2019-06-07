@@ -11,7 +11,7 @@ class Home extends Component {
 				<NavBar />
 				<div className="row d-flex flex-column justify-content-center align-items-center mb-1">
 					<p className="section-header-p m-0 mt-5 pt-5">
-						Introducing The Gillespie
+						Introducing The Gillespies
 					</p>
 					<p className="copy-p pb-5 mb-5">est. October 20, 2018</p>
 				</div>
